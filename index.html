@@ -1,144 +1,325 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio | Michael Lorena</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
-      cursor: crosshair;
-    }
+  <!-- SEO PRINCIPAL -->
+  <title>Michael Lorena | Desenvolvedor Front-End</title>
 
-    header {
-      background: #020617;
-      padding: 40px 20px;
-      text-align: center;
-    }
+  <meta name="description" content="Portfólio de Michael Lorena, desenvolvedor front-end especializado em HTML, CSS e JavaScript. Criação de sites modernos, responsivos e profissionais.">
 
-    .perfil {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 4px solid #38bdf8;
-      box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
-    }
+  <meta name="keywords" content="Michael Lorena, desenvolvedor front-end, programador web, HTML, CSS, JavaScript, portfólio front-end">
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
+  <meta name="author" content="Michael Lorena">
 
-    header p {
-      margin-top: 10px;
-      color: #94a3b8;
-    }
+  <!-- SEO PARA REDES SOCIAIS -->
+  <meta property="og:title" content="Michael Lorena | Desenvolvedor Front-End">
+  <meta property="og:description" content="Portfólio profissional de desenvolvedor front-end com projetos, habilidades e contato.">
+  <meta property="og:image" content="img/banner.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
 
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    h2 {
-      color: #38bdf8;
-      border-bottom: 2px solid #1e293b;
-      padding-bottom: 5px;
-    }
-
-    .card {
-      background: #020617;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    footer {
-      background: #020617;
-      text-align: center;
-      padding: 20px;
-      color: #94a3b8;
-    }
-  </style>
 </head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michael Lorena | Portfólio</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#050816;
+  color:#e5e7eb;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:15px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(5,8,22,.8);
+  backdrop-filter: blur(10px);
+  z-index:1000;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+nav a{
+  color:#e5e7eb;
+  text-decoration:none;
+  font-weight:500;
+}
+
+/* HERO */
+header{
+  height:100vh;
+  background:
+    linear-gradient(to bottom, rgba(5,8,22,.85), #050816),
+    url("fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  padding:120px 60px 60px;
+}
+
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+  gap:50px;
+}
+
+.hero-text h1{
+  font-size:3rem;
+  margin-bottom:10px;
+}
+
+.hero-text span{
+  color:#38bdf8;
+}
+
+.hero-text p{
+  font-size:1.2rem;
+  opacity:.9;
+}
+
+/* FOTO */
+.hero-photo{
+  position:relative;
+}
+
+.hero-photo img{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid #38bdf8;
+  box-shadow:0 0 40px #38bdf8;
+}
+
+/* SECTIONS */
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 40px;
+}
+
+h2{
+  color:#38bdf8;
+  margin-bottom:25px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+.card{
+  background:rgba(255,255,255,.03);
+  border:1px solid #1e293b;
+  border-radius:16px;
+  padding:25px;
+}
+
+/* LISTA */
+ul{
+  padding-left:20px;
+}
+
+li{
+  margin-bottom:10px;
+}
+
+/* SOCIAL */
+.social{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:60px 0;
+}
+
+.social a{
+  padding:14px 28px;
+  border-radius:30px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.whatsapp{ background:#25D366; }
+.facebook{ background:#1877F2; }
+.instagram{ background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af); }
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:.6;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+  .hero{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
+</style /* ================= ANIMAÇÕES SUAVES ================= */
+section, .card {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: aparecer 0.8s ease forwards;
+}
+
+section {
+  animation-delay: 0.2s;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= GLOW NA FOTO ================= */
+.hero-photo img {
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.hero-photo img:hover {
+  box-shadow: 0 0 60px #38bdf8, 0 0 120px rgba(56,189,248,0.6);
+  transform: scale(1.05);
+}
+
+/* ================= BOTÕES COM HOVER ================= */
+.social a {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social a:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* ================= MOBILE PERFEITO ================= */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header {
+    padding: 140px 20px 60px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-photo img {
+    width: 200px;
+    height: 200px;
+  }
+}>
+</head>
+
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <img src="WhatsApp Image 2026-01-08 at 00.27.32.jpeg" alt="Foto de Michael Lorena" class="perfil">
-    <h1>Michael Lorena</h1>
-    <p>Desenvolvedor Front-end | Suporte Técnico | Programador Júnior</p>
-  </header>
+<nav>
+  <strong>Michael Lorena</strong>
+  <ul>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#habilidades">Habilidades</a></li>
+    <li><a href="#projetos">Projetos</a></li>
+    <li><a href="#formacao">Formação</a></li>
+  </ul>
+</nav>
 
-  <!-- SOBRE -->
-  <section>
-    <h2>Sobre mim</h2>
-    <div class="card">
-      <p>
-        Profissional em início de carreira na área de Tecnologia, com foco em
-        <strong>Desenvolvimento Front-end</strong> e <strong>Suporte Técnico</strong>.
-        Possuo base sólida em lógica de programação, criação de interfaces web e
-        manutenção avançada de computadores.
-      </p>
+<header>
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Michael <span>Lorena</span></h1>
+      <p>Front-End Developer</p>
     </div>
-  </section>
 
-  <!-- HABILIDADES -->
-  <section>
-    <h2>Habilidades</h2>
-    <div class="card">
-      <ul>
-        <li>Especialidade em Front-end (HTML, CSS, JavaScript)</li>
-        <li>Criação de interfaces responsivas</li>
-        <li>Lógica de Programação e Algoritmos</li>
-        <li>Python, Java e C++</li>
-        <li>Uso do CMD / Terminal</li>
-        <li>Manutenção avançada de computadores</li>
-        <li>Sistemas Operacionais: Windows, Linux e macOS</li>
-      </ul>
+    <div class="hero-photo">
+      <img src="WhatsApp Image 2026-01-08 at 00.27.32.jpeg" alt="Foto Michael Lorena">
     </div>
-  </section>
+  </div>
+</header>
 
-  <!-- PROJETOS -->
-  <section>
-    <h2>Projetos</h2>
+<section id="sobre">
+  <h2>👤 Sobre mim</h2>
+  <div class="card">
+    Sou desenvolvedor Front-end focado em criar interfaces modernas, responsivas e intuitivas.
+Tenho facilidade em aprender novas tecnologias, resolver problemas e transformar ideias em soluções digitais.
+Busco minha primeira oportunidade profissional para aplicar meus conhecimentos, evoluir tecnicamente e gerar valor para a equipe.
+  </div>
+</section>
+
+<section id="habilidades">
+  <h2>💻 Habilidades</h2>
+  <div class="card">
+    <ul>
+      <li>Front-end (HTML, CSS, JavaScript)</li>
+      <li>Lógica de Programação</li>
+      <li>Interfaces Responsivas</li>
+      <li>Python, Java, C++</li>
+      <li>CMD / Terminal</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projetos">
+  <h2>🛠️ Projetos</h2>
+  <div class="grid">
     <div class="card">
-      <p><strong>Projeto 1 – Introdução à Programação</strong></p>
-      <p>Prática de lógica, variáveis e laços de repetição.</p>
-
-      <p><strong>Projeto 2 – Scripts no Windows (CMD)</strong></p>
-      <p>Automação básica e execução de comandos.</p>
-
-      <p><strong>Projeto 3 – Conteúdo Educacional</strong></p>
-      <p>Criação de explicações simples sobre programação.</p>
+      <strong>Introdução à Programação</strong><br>
+      Lógica, variáveis e estruturas básicas.
     </div>
-  </section>
-
-  <!-- FORMAÇÃO -->
-  <section>
-    <h2>Formação</h2>
     <div class="card">
-      <ul>
-        <li>DevClub – Formação em Programação</li>
-        <li>Alura – Cursos de Programação e Tecnologia</li>
-      </ul>
+      <strong>Scripts no Windows (CMD)</strong><br>
+      Automação e execução de programas.
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    © 2026 – Michael Lorena | Portfólio Profissional
-  </footer>
+<section id="formacao">
+  <h2>🎓 Formação</h2>
+  <div class="grid">
+    <div class="card">DevClub – Formação em Programação</div>
+    <div class="card">Alura – Cursos de Tecnologia</div>
+  </div>
+</section>
+
+<div class="social">
+  <a class="whatsapp" href="https://wa.me/5511935004771" target="_blank">WhatsApp</a>
+  <a class="facebook" href="https://www.facebook.com/nlmichaellorena" target="_blank">Facebook</a>
+  <a class="instagram" href="https://www.instagram.com/mclovinmaycon" target="_blank">Instagram</a>
+</div>
+
+<footer>
+  © 2026 • Michael Lorena
+</footer>
 
 </body>
 </html>
